@@ -1,1 +1,3 @@
-exports.wordbank = ["ruby", "diamond", "opal", "amythest", "gem", "mineral" ]
+
+
+exports.wordbank = ["ruby", "diamond", "opal", "amythest", "gem", "mineral", "quartz"]
