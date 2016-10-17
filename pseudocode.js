@@ -2,9 +2,9 @@
 
 
 //inquirer and prompt npm packages
-//pick a random word
-//display dashes for each character in the random word
-//capture keypress and capture its value
+//pick a random word - main
+//display dashes for each character in the random word -main
+//capture keypress and capture its value -main/game?
 //test if value exists in the word and how many times it exists in the word (functions)
 //update the display in console
 //keep track of correct/incorrect characters

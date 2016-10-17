@@ -1,17 +1,20 @@
 
-// var game = require ('./game.js')
+var Game = require('./game.js')
 // var letter = require('./letter.js')
 // var word = require('./word.js')
 
 //will contain the logic of your app. Running it in Terminal/Bash will start the game.
 //The app should end when a player guesses the correct word or runs out of guesses.
-var Game = require('./game.js');
-var Word = require('./word.js');
+// var Game = require('./game.js');
+// var Word = require('./word.js');
 var inquirer = require('inquirer');
 
-// call your function in here then decrement if it returns false  when
-//looking for the files
-var game = new Game();
+
+var dan = new Game();
+
+function Word (name){
+	this.name = letter
+}
 
 var prompt = function () {
     inquirer.prompt([{
@@ -19,7 +22,7 @@ var prompt = function () {
         type:'input',
         name:'letter',
         validate: function (input) {
-            if (!input.match(/regex/)){
+            if (!input.match(/[a-z]/i)){
                 return ('Please choose only a letter A-Z')
             }
             else{
@@ -29,29 +32,34 @@ var prompt = function () {
         }
     }])
         .then(function(answers){
-            game.guess(answers.letter);
+            var newGuy = new Word(answers.letter);
         });
 
 };
 
-//restarting a game after it has been completed based on users input
-var newGame = function () {
-    inquirer.prompt([{
-        message:" Would you like to play another game?",
-        type:'confirm',
-        name: 'restart'
-    }])
-        .then(function(answers){
-            if(answers.restart){
-                game.init();
+prompt();
 
-            }
-            else{
-                process.exit();
-            }
-        });
-};
 
+console.log(dan.random())
+
+
+// var newGame = function () {
+//     inquirer.prompt([{
+//         message:" Would you like to play another game?",
+//         type:'confirm',
+//         name: 'restart'
+//     }])
+//         .then(function(answers){
+//             if(answers.restart){
+//                 game.init();
+
+//             }
+//             else{
+//                 process.exit();
+//             }
+//         });
+// };
+// newGame();
 
 
 
